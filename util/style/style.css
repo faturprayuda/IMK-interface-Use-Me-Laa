@@ -1,33 +1,106 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 1000px;
+  margin: 0;
+  padding: 0;
+  height: 1000px;
+  font-family: "Baloo Thambi 2", cursive;
 }
 
-/* *large screen */
+/* *navbar */
+.navbar {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+#item {
+  color: #333333;
+  font-size: 20px;
+}
+
+/* *navbar sticky */
+#navbar {
+  overflow: hidden;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+  padding-top: 60px;
+}
+
 @media (min-width: 1200px) {
-    .navbar-brand img {
-        width: 50px;
-    }
+
+  /* *navbar */
+
+  .navbar {
+    height: 100px;
+  }
+
+  .navbar-brand img {
+    width: 250px;
+  }
+
+  .navbar-nav {
+    margin: 10px 0 0 320px;
+  }
+
+  .nav-item {
+    margin: 0 15px;
+  }
+
+  #item {
+    padding: 0 20px;
+  }
+
+  /* *line animation */
+  .navbar-nav a {
+    text-decoration: none;
+    font-weight: 400;
+    display: inline-block;
+  }
+
+  .nav-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a6b1e1;
+    transition: width .6s
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+    transition: width .6s;
+  }
 }
 
 /* *small screen */
-@media (min-width: 576px) {
+@media (min-width: 300px) {
 
-    /* *header */
-    .navbar {
-        padding: 10px 0;
-    }
+  /* *header */
+  .navbar {
+    padding: 10px 0;
+  }
 
-    .navbar-brand {
-        margin-left: 15px;
-    }
+  .navbar-brand {
+    margin-left: 15px;
+  }
 
-    .navbar-brand img {
-        width: 50px;
-    }
+  .navbar-brand img {
+    width: 150px;
+  }
 
-    .navbar-nav {
-        align-items: center;
-    }
+  .navbar-nav {
+    align-items: center;
+  }
+
 }
