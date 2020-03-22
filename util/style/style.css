@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 1000px;
+}
+
+/* *large screen */
+@media (min-width: 1200px) {
+    .navbar-brand img {
+        width: 50px;
+    }
+}
+
+/* *small screen */
+@media (min-width: 576px) {
+
+    /* *header */
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .navbar-brand {
+        margin-left: 15px;
+    }
+
+    .navbar-brand img {
+        width: 50px;
+    }
+
+    .navbar-nav {
+        align-items: center;
+    }
+}
