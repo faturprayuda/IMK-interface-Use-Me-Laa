@@ -8,6 +8,13 @@ body {
 /* *navbar */
 .navbar {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1 !important;
+}
+
+#slider {
+  z-index: 0 !important;
+  padding: 0 !important;
 }
 
 #item {
@@ -15,6 +22,9 @@ body {
   font-size: 20px;
 }
 
+.swiper-container-text-banner {
+  margin-top: 100px;
+}
 /* *navbar sticky */
 #navbar {
   overflow: hidden;
@@ -33,12 +43,12 @@ body {
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky+.content {
+.sticky + .content {
   padding-top: 60px;
 }
 
+/* *large screen (desktop) */
 @media (min-width: 1200px) {
-
   /* *navbar */
 
   .navbar {
@@ -69,23 +79,33 @@ body {
   }
 
   .nav-item::after {
-    content: '';
+    content: "";
     display: block;
     width: 0;
     height: 2px;
     background: #a6b1e1;
-    transition: width .6s
+    transition: width 0.6s;
   }
 
   .nav-item:hover::after {
     width: 100%;
-    transition: width .6s;
+    transition: width 0.6s;
+  }
+
+  /* *content */
+
+  .content {
+    margin-top: 50px;
+  }
+
+  /* *slider swiper */
+  .swiper-container {
+    margin-top: 100px;
   }
 }
 
 /* *small screen */
 @media (min-width: 300px) {
-
   /* *header */
   .navbar {
     padding: 10px 0;
@@ -103,4 +123,9 @@ body {
     align-items: center;
   }
 
+  /* *content */
+
+  .content {
+    margin-top: 80px;
+  }
 }

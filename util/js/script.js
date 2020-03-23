@@ -1,3 +1,5 @@
+// !navbar sticky
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () {
     myFunction()
@@ -17,3 +19,5 @@ function myFunction() {
         navbar.classList.remove("sticky");
     }
 }
+
+// !end navbar sticky

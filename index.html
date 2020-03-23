@@ -15,10 +15,15 @@
 
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi+2&display=swap" rel="stylesheet" />
+
+    <!-- swiperjs CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
 </head>
 
 <body>
-    <!-- header -->
+    <!-- ?header -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
         <a class="navbar-brand" href="#"><img src="util/img/uml_logo.png" /></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -33,7 +38,47 @@
             </div>
         </div>
     </nav>
-    <!-- end header -->
+    <!-- ?end header -->
+
+    <!-- ?content -->
+    <div class="container">
+        <div class="row no-gutter">
+            <div class="col-3">
+                <!-- Slider main container -->
+                <div class="swiper-container-text-banner" id="slider">
+                    <!-- Additional required wrapper -->
+                    <div class=" swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="util/img/banner_text.png">
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" id="swiper-next"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+            <div class="col-9">
+                <!-- Slider main container -->
+                <div class="swiper-container" id="slider">
+                    <!-- Additional required wrapper -->
+                    <div class=" swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img
+                                src="https://images.unsplash.com/photo-1511649475669-e288648b2339?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
+                        </div>
+                    </div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev" id="swiper-next"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ?end content -->
 
     <!-- getbootstrap js -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -48,6 +93,12 @@
 
     <!-- !my JS -->
     <script src="util/js/script.js"></script>
+
+    <!-- swiperJS -->
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="util/js/swiper_slide.js"></script>
+
 </body>
 
 </html>
